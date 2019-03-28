@@ -10,12 +10,12 @@ import { MetaService } from '@ngx-meta/core';
 export class ListComponent implements OnInit {
 
     constructor(
-        // private titleService: Title,
         private readonly meta: MetaService,
     ) {
-        // this.titleService.setTitle('Página correspondiente al listado de usuarios');
-        this.meta.setTitle(`List of users`);
-        this.meta.setTag('og:image', 'https://bnetproduct-a.akamaihd.net//26/108f97e24b8b60b4c132e42c0ee956d8-WoW_Letters_Icon_optimized.png');
+        // setTimeout(() => {
+        //     // this.meta.setTitle(`List of users`);
+        //     // this.meta.setTag('og:image', 'https://bnetproduct-a.akamaihd.net//26/108f97e24b8b60b4c132e42c0ee956d8-WoW_Letters_Icon_optimized.png');
+        // }, 300);
     }
 
     ngOnInit() {

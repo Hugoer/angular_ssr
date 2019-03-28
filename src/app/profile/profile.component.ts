@@ -11,7 +11,7 @@ export class ProfileComponent implements OnInit {
     constructor(
         private titleService: Title,
     ) {
-        this.titleService.setTitle('Página correspondiente al perfil del usuario');
+        // this.titleService.setTitle('Página correspondiente al perfil del usuario');
     }
 
     ngOnInit() {
