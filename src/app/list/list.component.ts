@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { MetaService } from '@ngx-meta/core';
+// import { Title } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-list',
@@ -9,9 +10,12 @@ import { Title } from '@angular/platform-browser';
 export class ListComponent implements OnInit {
 
     constructor(
-        private titleService: Title,
+        // private titleService: Title,
+        private readonly meta: MetaService,
     ) {
-        this.titleService.setTitle('Página correspondiente al listado de usuarios');
+        // this.titleService.setTitle('Página correspondiente al listado de usuarios');
+        this.meta.setTitle(`List of users`);
+        this.meta.setTag('og:image', 'https://bnetproduct-a.akamaihd.net//26/108f97e24b8b60b4c132e42c0ee956d8-WoW_Letters_Icon_optimized.png');
     }
 
     ngOnInit() {
