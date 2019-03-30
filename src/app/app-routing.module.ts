@@ -30,6 +30,11 @@ const routes: Routes = [
         canActivate: [MetaGuard],
     },
     {
+        path: 'profile/:id',
+        component: ProfileComponent,
+        canActivate: [MetaGuard],
+    },
+    {
         path: 'list',
         component: ListComponent,
         canActivate: [MetaGuard],

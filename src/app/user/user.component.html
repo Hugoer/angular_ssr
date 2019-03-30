@@ -1,0 +1,31 @@
+<mat-card class="example-card" *ngIf="user | async as _user; else showLogin">
+    <mat-card-header>
+        <mat-card-title>{{_user.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image class="user__photo" [src]="_user.imageUrl" alt="User profile {{_user.name}}">
+    <mat-card-content>
+
+        <mat-list>
+
+            <h3 mat-subheader>uid</h3>
+            <mat-list-item class="user__uid">
+                <h4 mat-line>{{_user._id}}</h4>
+            </mat-list-item>
+
+            <ng-container *ngIf="_user.id === 4">
+                texto condicional solo para spiderman
+            </ng-container>
+
+            <ng-container *ngIf="_user.id === 5">
+                texto condicional solo para Dr. strange
+            </ng-container>
+
+        </mat-list>
+
+    </mat-card-content>
+
+</mat-card>
+
+<ng-template #showLogin>
+    <mat-spinner></mat-spinner>
+</ng-template>
