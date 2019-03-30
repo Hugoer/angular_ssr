@@ -31,8 +31,10 @@ export class UserService {
                 switch (heroe.id) {
                     case 4:
                         heroe.imageUrl = `https://angulargdg-233dc.firebaseapp.com/assets/herovillain/spiderman.jpg`;
+                        break;
                     case 5:
                         heroe.imageUrl = `https://angulargdg-233dc.firebaseapp.com/assets/herovillain/strange.jpg`;
+                        break;
                     default:
                         break;
                 }
